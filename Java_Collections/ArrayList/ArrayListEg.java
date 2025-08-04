@@ -25,7 +25,24 @@ public class ArrayListEg{
 		System.out.println(arrayList.contains(10)); //true
 
 		
-		System.out.println(arrayList);		
+		System.out.println(arrayList);	
+  		
+	        System.out.println("\nGonna perform LinearSearch");
+		LinearSearch(arrayList,30); 	
+	}
+
+	public static void LinearSearch(ArrayList<Integer> list, int key ){
+		
+		int result = -1; 
+
+		for(int element : list){
+			if(element == key){
+				result = list.indexOf(element);
+				break;	
+			}
+		}
+		System.out.println(result == -1 ? "Element not found" : "Element found at : " + result); 	
 	}
 }	
+
 	
